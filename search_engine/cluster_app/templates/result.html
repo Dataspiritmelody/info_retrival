@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{% static 'styles.css' %}" rel="stylesheet">
+    <title>Clustering Result</title>
+</head>
+<body>
+    <div class="container mt-5 d-flex flex-column align-items-center">
+        <img src="{% static 'logo.png' %}"  height="100" alt="Logo" class="mb-4">
+        <div class="result-box text-center">
+            <h1 class="mb-4">Clustering Result</h1>
+            <div class="mt-4">
+                <h3>Cluster Category:</h3>
+                <h3 style=" color: brown;">{{ cluster_category }}</h3>
+            </div>
+            <a href="{% url 'cluster' %}" class="btn btn-primary mt-4">Cluster Another Document</a>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

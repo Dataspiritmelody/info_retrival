@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{% static 'styles.css' %}" rel="stylesheet">
+    <title>Search Publications</title>
+</head>
+<body>
+    <div class="container mt-5 d-flex flex-column align-items-center">
+        <img src="{% static 'logo.png' %}" height="100" alt="Logo" class="mb-4">
+        <div class="search-box text-center">
+            <h1 class="mb-4">Search Publications</h1>
+            <form action="{% url 'search' %}" method="GET" class="form-inline justify-content-center">
+                <div class="input-group mb-2 mr-sm-2">
+                    <input type="text" id="query" name="query" class="form-control" placeholder="Enter your query" required>
+                </div>
+                <button type="submit" class="btn btn-primary mb-2">Search</button>
+            </form>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
